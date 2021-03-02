@@ -20,11 +20,11 @@ AnyLink 基于 [ietf-openconnect](https://tools.ietf.org/html/draft-mavrogiannop
 
 AnyLink 使用TLS/DTLS进行数据加密，因此需要RSA或ECC证书，可以通过 Let's Encrypt 和 TrustAsia 申请免费的SSL证书。
 
-AnyLink 服务端仅在CentOS7、Ubuntu测试通过，如需要安装在其他系统，需要服务端支持tun/tap功能、ip设置命令。
+AnyLink 服务端仅在CentOS 7、Ubuntu 18.04测试通过，如需要安装在其他系统，需要服务端支持tun/tap功能、ip设置命令。
 
 ## Screenshot
 
-![online](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/online.jpg)
+![online](screenshot/online.jpg)
 
 ## Installation
 
@@ -34,7 +34,7 @@ AnyLink 服务端仅在CentOS7、Ubuntu测试通过，如需要安装在其他�
 git clone https://github.com/bjdgyc/anylink.git
 
 cd anylink
-sh deploy.sh
+sh build.sh
 
 # 注意使用root权限运行
 cd anylink-deploy
@@ -55,10 +55,11 @@ sudo ./anylink -conf="conf/server.toml"
 - [x] 用户组支持
 - [x] 多用户支持
 - [x] TOTP令牌支持
+- [x] TOTP令牌开关
 - [x] 流量控制
 - [x] 后台管理界面
 - [x] 访问权限管理
-  
+
 - [ ] DTLS-UDP通道
 
 ## Config
@@ -73,7 +74,7 @@ sudo ./anylink -conf="conf/server.toml"
 ./anylink -secret
 ```
 
-[conf/server.toml](https://github.com/bjdgyc/anylink/blob/master/conf/server.toml)
+[conf/server.toml](server/conf/server.toml)
 
 ## Setting
 
@@ -132,7 +133,7 @@ sh bridge-init.sh
 
 ## Discussion
 
-![qq.png](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/qq.png)
+![qq.png](screenshot/qq.png)
 
 添加QQ群: 567510628
 
@@ -145,11 +146,11 @@ sh bridge-init.sh
 <details>
 <summary>展开查看</summary>
 
-![system.jpg](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/system.jpg)
-![setting.jpg](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/setting.jpg)
-![users.jpg](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/users.jpg)
-![ip_map.jpg](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/ip_map.jpg)
-![group.jpg](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/group.jpg)
+![system.jpg](screenshot/system.jpg)
+![setting.jpg](screenshot/setting.jpg)
+![users.jpg](screenshot/users.jpg)
+![ip_map.jpg](screenshot/ip_map.jpg)
+![group.jpg](screenshot/group.jpg)
 
 </details>
 
@@ -157,10 +158,11 @@ sh bridge-init.sh
 
 本项目采用 MIT 开源授权许可证，完整的授权说明已放置在 LICENSE 文件中。
 
-
 ## Thank
 
-[![jetbrains.png](https://gitee.com/bjdgyc/anylink/raw/master/screenshot/jetbrains.png)](https://www.jetbrains.com)
+<a href="https://www.jetbrains.com">
+    <img src="screenshot/jetbrains.png" width="200" height="200" alt="jetbrains.png" />
+</a>
 
 
 
